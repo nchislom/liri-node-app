@@ -4,16 +4,6 @@ require("dotenv").config();
 // Importing keys.js file; stored as variable
 var keys = require("./keys.js");
 
-/************* 
-  -= Liri Command Examples =-
-  
-    node liri-node-app.js concert-this <artist name>
-    node liri-node-app.js spotify-this-song <song name>
-    node liri-node-app.js movie-this <movie name>
-    node liri-node-app.js do-what-it-says
-
-****************/
-
 var command = process.argv[2];
 switch(command){
     case 'concert-this':
@@ -220,5 +210,3 @@ function doThis(){
         }
     });
 }
-
-getSong("I Want It That Way");
