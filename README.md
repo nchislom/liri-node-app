@@ -2,11 +2,11 @@
 A command line **L**anguage **I**nterpretation and **R**ecognition **I**nterface.
 
 ## Requirements
-* NodeJS
-* API Keys for Spofity, OMDB, and BandsInTown
+* [NodeJS](https://nodejs.org/en/download/)
+* API keys for [Spofity](https://developer.spotify.com/documentation/web-api/), [OMDB](http://www.omdbapi.com/), and [BandsInTown](http://www.artists.bandsintown.com/bandsintown-api)
 
 ## Setup
-1. Ensure NodeJS is installed (https://nodejs.org/en/download/)
+1. Ensure NodeJS is installed
 1. Clone this repository to your workstation
 1. Run `npm i` from inside the **liri-node-app** folder
 1. Within the **liri-node-app**, create a file called `.env`
