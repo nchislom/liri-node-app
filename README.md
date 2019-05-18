@@ -28,17 +28,21 @@ BANDS_ID=
     * Used to retrieve up-to-date live music dates for a band/artist via BandsInTown
     * Structure: `node liri-node-app.js concert-this <artist name>`
     * Example: `node liri-node-app.js concert-this Depeche Mode`
+    ![Example](./images/liri-concert.gif)
 * **spotify-this-song**
     * Used to retrieve song track information via Spotify
     * Structure: `node liri-node-app.js spotify-this-song <song name>`
     * Example: `node liri-node-app.js spotify-this-song Macarena`
+    ![Example](./images/liri-spotify.gif)
 * **movie-this**
     * Used to query movie information via OMDB
     * Structure: `node liri-node-app.js movie-this <movie name>`
     * Example: `node liri-node-app.js movie-this Dune`
+    ![Example](./images/liri-movie.gif)
 * **--help**
     * Use the `--help` command-line switch to get this information about command options
     * Example: `node liri-node-app.js --help`
+    ![Example](./images/liri-help.gif)
 
 ### Batch List
 * **do-what-it-says**
@@ -53,5 +57,6 @@ spotify-this-song,"True
 concert-this,"Depeche Mode
 ```
 * Note: Avoid placing an empty line at the end of your random.txt file
+    ![Example](./images/liri-doit.gif)
 
 

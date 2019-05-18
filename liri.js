@@ -62,12 +62,16 @@ function getConcerts(input){
     // Call to API via Axios
     axios.get(queryURL).then(
         function(response) {
-            for(let i=0; i<response.data.length; i++){
-                let data = response.data[i];
-                console.log("\n-------------------\n");
-                console.log("Venue name: " + data.venue.name);
-                console.log("Location: " + data.venue.city + ", " + data.venue.region);
-                console.log("Date: " + moment(data.datetime).format('L'));
+            if(response.data.length === 0){
+                console.log("No results found.");
+            } else {
+                for(let i=0; i<response.data.length; i++){
+                    let data = response.data[i];
+                    console.log("\n-------------------\n");
+                    console.log("Venue name: " + data.venue.name);
+                    console.log("Location: " + data.venue.city + ", " + data.venue.region);
+                    console.log("Date: " + moment(data.datetime).format('L'));
+                }
             }
     }).catch((err) => {
         console.log(err);
@@ -103,7 +107,7 @@ function getSong(input){
     secret: keys.spotify.secret
     });
     
-    spotify.search({ type: 'track', query: songTitle }, function(err, data) {
+    spotify.search({ type: 'track', query: songTitle, limit: 1 }, function(err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
